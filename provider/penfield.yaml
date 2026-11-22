@@ -1,0 +1,48 @@
+identity:
+  author: penfieldlabs
+  name: penfield
+  label:
+    en_US: Penfield
+    zh_Hans: Penfield
+  description:
+    en_US: Long-term memory and a knowledge graph for your AI apps. Store, search, link and explore memories, save session checkpoints and keep files, all shared across conversations, workflows and AI tools.
+    zh_Hans: 为你的 AI 应用提供长期记忆和知识图谱。存储、搜索、关联和探索记忆，保存会话检查点并保存文件，在对话、工作流和不同 AI 工具之间共享。
+  icon: icon.svg
+  tags:
+    - productivity
+    - utilities
+credentials_for_provider:
+  penfield_api_key:
+    type: secret-input
+    required: true
+    label:
+      en_US: Penfield API key
+      zh_Hans: Penfield API 密钥
+    placeholder:
+      en_US: Paste your Penfield API key (starts with tm_)
+      zh_Hans: 粘贴你的 Penfield API 密钥（以 tm_ 开头）
+    help:
+      en_US: Create an API key in the Penfield portal under API Keys. Read and write covers most tools; disconnecting memories and deleting files also need the delete permission.
+      zh_Hans: 在 Penfield 门户的“API Keys”页面中创建 API 密钥。读取和写入权限适用于大多数工具；断开记忆和删除文件还需要删除权限。
+    url: https://portal.penfield.app/api-keys
+tools:
+  - tools/awaken.yaml
+  - tools/store.yaml
+  - tools/recall.yaml
+  - tools/search.yaml
+  - tools/fetch.yaml
+  - tools/update_memory.yaml
+  - tools/connect.yaml
+  - tools/disconnect.yaml
+  - tools/explore.yaml
+  - tools/reflect.yaml
+  - tools/save_context.yaml
+  - tools/restore_context.yaml
+  - tools/list_contexts.yaml
+  - tools/save_artifact.yaml
+  - tools/retrieve_artifact.yaml
+  - tools/list_artifacts.yaml
+  - tools/delete_artifact.yaml
+extra:
+  python:
+    source: provider/penfield.py
